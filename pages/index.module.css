@@ -6,7 +6,7 @@
 
   @screen lg {
     grid-template-columns: 1fr 3fr 1fr;
-    column-gap: 25px;
+    gap: 2.5rem 25px;
 
     & > * {
       grid-column: 2;
@@ -30,8 +30,7 @@
   }
 
   & > :global(.code-container) {
-    overflow: hidden;
-    grid-column: 1 / end;
+    @apply overflow-hidden col-span-full;
   }
 
   & > :global(.code-container) pre {
@@ -56,10 +55,19 @@
   & h2 {
     @apply font-mono font-bold text-xl md:text-2xl lg:text-3xl;
   }
+
+  & blockquote {
+    @apply italic text-2xl text-center col-span-full py-5;
+  }
 }
 
 @screen lg {
   .fullBleed {
     grid-column: 1 / 4;
   }
+}
+
+.reaction {
+  grid-column: 3;
+  place-self: center;
 }

@@ -2,6 +2,7 @@ dependencies:
   next: 10.0.8_5347ba9dae72bc17e95cc7756ff465f1
   react: 17.0.1
   react-dom: 17.0.1_react@17.0.1
+  react-gist: 1.2.2_react@17.0.1
   react-render-html: 0.6.0_react@17.0.1
 devDependencies:
   '@types/node': 14.14.33
@@ -1573,6 +1574,15 @@ packages:
       react: 17.0.1
     resolution:
       integrity: sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+  /react-gist/1.2.2_react@17.0.1:
+    dependencies:
+      prop-types: 15.7.2
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      react: 0.14.x || ^15.0.0-rc || ^16.0.0-rc
+    resolution:
+      integrity: sha512-bS8jkqunrsrUYzSe600zYPI6IvudLFsh68Bln+q8+GRZ2uUnrkOuEAxllWbZwaveqby94YXBBmBCC3qw9ee5hQ==
   /react-is/16.13.1:
     dev: false
     resolution:
@@ -2040,6 +2050,7 @@ specifiers:
   postcss-nesting: ^7.0.1
   react: 17.0.1
   react-dom: 17.0.1
+  react-gist: ^1.2.2
   react-render-html: ^0.6.0
   tailwindcss: ^2.0.2
   typescript: ^4.1.3
