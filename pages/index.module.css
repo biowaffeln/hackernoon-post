@@ -66,8 +66,3 @@
     grid-column: 1 / 4;
   }
 }
-
-.reaction {
-  grid-column: 3;
-  place-self: center;
-}

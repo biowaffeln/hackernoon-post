@@ -4,6 +4,7 @@ dependencies:
   react-dom: 17.0.1_react@17.0.1
   react-gist: 1.2.2_react@17.0.1
   react-render-html: 0.6.0_react@17.0.1
+  valtio: 0.8.1_react@17.0.1
 devDependencies:
   '@types/node': 14.14.33
   '@types/react': 17.0.3
@@ -1482,6 +1483,10 @@ packages:
     dev: false
     resolution:
       integrity: sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
+  /proxy-compare/1.1.6:
+    dev: false
+    resolution:
+      integrity: sha512-V65euKrKgKjVyEh5+4nVlAf4dHJ6Q0cF77MCeZiJaOldAl9lndy/u270SJneHiz3UkVcSIhxfOKY7aFkrMyo5g==
   /public-encrypt/4.0.3:
     dependencies:
       bn.js: 4.12.0
@@ -2001,6 +2006,25 @@ packages:
     dev: false
     resolution:
       integrity: sha512-HShAsny+zS2TZfaXxD9tYj4HQGlBezXZMZuM/S5PKLLoZkShZiGk9o5CzukI1LVHZvjdvZ2Sj1aW/Ndn2NB/HQ==
+  /valtio/0.8.1_react@17.0.1:
+    dependencies:
+      proxy-compare: 1.1.6
+      react: 17.0.1
+    dev: false
+    peerDependencies:
+      '@babel/helper-module-imports': '>=7.12'
+      '@babel/types': '>=7.13'
+      babel-plugin-macros: '>=3.0'
+      react: '>=16.8'
+    peerDependenciesMeta:
+      '@babel/helper-module-imports':
+        optional: true
+      '@babel/types':
+        optional: true
+      babel-plugin-macros:
+        optional: true
+    resolution:
+      integrity: sha512-QlWY2FuWITNcWhODxg9K18OJiRT/mxTUpioVmax0c9gHS/yG70hPfMNPsdQI0+NupLZ6ay/M4bezPc6CsJjw8A==
   /vm-browserify/1.1.2:
     dev: false
     resolution:
@@ -2054,3 +2078,4 @@ specifiers:
   react-render-html: ^0.6.0
   tailwindcss: ^2.0.2
   typescript: ^4.1.3
+  valtio: ^0.8.1

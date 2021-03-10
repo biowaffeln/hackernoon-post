@@ -1,0 +1,21 @@
+.reactionArea {
+  display: none;
+}
+
+@screen lg {
+  .reactionArea {
+    grid-column: 3;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.reaction {
+  opacity: 0;
+  transition: opacity 1s;
+  @apply ml-10 text-xl space-x-2;
+}
+
+.reaction[data-active] {
+  opacity: 1;
+}

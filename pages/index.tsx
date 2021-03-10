@@ -1,10 +1,9 @@
 import { GetStaticProps } from "next";
-import { Children, FC } from "react";
+import { FC } from "react";
 import { readFile } from "fs/promises";
 import { Post } from "../types/post";
-import renderHTML from "react-render-html";
 import styles from "./index.module.css";
-import Gist from "react-gist";
+import { parseDate, parseMarkup } from "../components/parser";
 
 const Navbar = () => (
   <header className="bg-hn-primary">
@@ -14,32 +13,8 @@ const Navbar = () => (
   </header>
 );
 
-const Reaction = () => <div className={styles.reaction}>(reaction)</div>;
-
 type HomeProps = {
   data: Post;
-};
-
-const parseDate = (publishedAt: number) =>
-  new Date(publishedAt * 1000).toUTCString();
-
-const parse = (markup: string) => {
-  const children = renderHTML(markup);
-  const result = [];
-  Children.forEach(children, (child) => {
-    if (child.props.className === "gist-container") {
-      const id = child.props.children[0].props.id.split("-").pop();
-      const gist = <Gist id={id} key={id} />;
-      result.push(gist);
-    } else if (child.props.className === "paragraph") {
-      const reaction = <Reaction />;
-      result.push(child, reaction);
-    } else {
-      result.push(child);
-    }
-  });
-
-  return result;
 };
 
 const Home: FC<HomeProps> = ({ data }) => {
@@ -60,7 +35,7 @@ const Home: FC<HomeProps> = ({ data }) => {
             src={data.mainImage}
           />
         </div>
-        {parse(data.markup)}
+        {parseMarkup(data.markup)}
       </article>
     </>
   );
