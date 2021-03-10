@@ -1,0 +1,65 @@
+.articleContainer {
+  @apply grid mx-auto px-5 box-content;
+
+  max-width: 1200px;
+  row-gap: 1.5rem;
+
+  @screen lg {
+    grid-template-columns: 1fr 3fr 1fr;
+    column-gap: 25px;
+
+    & > * {
+      grid-column: 2;
+    }
+  }
+
+  & :global(.paragraph) {
+    @apply break-words md:text-lg lg:text-xl leading-normal;
+
+    & pre {
+      @apply inline bg-gray-200 py-0.5 px-1;
+    }
+  }
+
+  & > :global(.gist-container) {
+    overflow: hidden;
+  }
+
+  & > :global(.youtube-container) iframe {
+    width: 100%;
+  }
+
+  & > :global(.code-container) {
+    overflow: hidden;
+    grid-column: 1 / end;
+  }
+
+  & > :global(.code-container) pre {
+    whitespace: pre-wrap;
+  }
+
+  & a {
+    background-image: linear-gradient(
+      theme("colors.hn-primary"),
+      theme("colors.hn-primary")
+    );
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 100% 10px;
+    transition: background-size 0.2s;
+  }
+
+  & a:hover {
+    background-size: 100% 100%;
+  }
+
+  & h2 {
+    @apply font-mono font-bold text-xl md:text-2xl lg:text-3xl;
+  }
+}
+
+@screen lg {
+  .fullBleed {
+    grid-column: 1 / 4;
+  }
+}
