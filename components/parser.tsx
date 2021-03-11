@@ -36,7 +36,9 @@ const Paragraph: FC<IdProps> = ({ id, ...rest }) => (
 );
 
 export const parseDate = (publishedAt: number) =>
-  new Date(publishedAt * 1000).toUTCString();
+  new Intl.DateTimeFormat("en-US", {
+    dateStyle: "long",
+  }).format(new Date(publishedAt * 1000));
 
 export const parseMarkup = (markup: string) => {
   const children = renderHTML(markup);

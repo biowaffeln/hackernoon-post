@@ -1,5 +1,5 @@
 .articleContainer {
-  @apply grid mx-auto px-5 box-content;
+  @apply grid mx-auto box-content px-5 mb-32 md:mt-10;
 
   max-width: 1200px;
   row-gap: 1.5rem;
@@ -33,14 +33,10 @@
     @apply overflow-hidden col-span-full;
   }
 
-  & > :global(.code-container) pre {
-    whitespace: pre-wrap;
-  }
-
   & a {
     background-image: linear-gradient(
-      theme("colors.hn-primary"),
-      theme("colors.hn-primary")
+      theme("colors.hn-primary-light"),
+      theme("colors.hn-primary-light")
     );
     background-position: 0 100%;
     background-repeat: no-repeat;
@@ -49,11 +45,15 @@
   }
 
   & a:hover {
+    background-image: linear-gradient(
+      theme("colors.hn-primary"),
+      theme("colors.hn-primary")
+    );
     background-size: 100% 100%;
   }
 
   & h2 {
-    @apply font-mono font-bold text-xl md:text-2xl lg:text-3xl;
+    @apply text-xl md:text-2xl lg:text-3xl;
   }
 
   & blockquote {
@@ -65,4 +65,9 @@
   .fullBleed {
     grid-column: 1 / 4;
   }
+}
+
+.profile {
+  @apply col-start-1 row-span-6 row-end-auto flex items-start space-x-4
+  lg:space-x-0 lg:flex-col lg:space-y-4;
 }
