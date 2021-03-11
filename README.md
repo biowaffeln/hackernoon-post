@@ -1,15 +1,20 @@
-# hackernoon-article
+# Hackernoon Post
 
-This Next.js project was bootstrapped with the [`next-gen`](https://github.com/biowaffeln/next-gen) project generator.
+**technologies used:**
+- Next.js
+- Tailwind + CSS Modules for styling
 
-## Getting Started
+**Time spent:** ~4h over two days
 
-Start a development server by running:
+## Goals
+- [x] recreate the hackernoon layout + visual identity
+- [x] render all post content correctly (gists, blockquotes, etc.)
+- [x] responsiveness
+- [x] basic inline emoji reactions prototype
 
-```sh
-npm run dev
-```
+## Out of Scope
+Some features I left out due to time constraints:
 
-Then open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
-
-For more information, visit the [Next.js documentation](https://nextjs.org/docs).
+- footer and related stories
+- fully functional inline emoji reactions
+- dark mode
